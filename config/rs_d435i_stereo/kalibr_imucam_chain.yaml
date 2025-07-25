@@ -1,0 +1,39 @@
+%YAML:1.0
+
+cam0:
+  # Extrinsics from your VINS config (body_T_cam0)
+  T_cam_imu:
+    - [ 0.99992871,  0.01158363,  0.00289558, -0.00621097]
+    - [-0.0115408,   0.9998298,  -0.01439412,  0.01339237]
+    - [-0.00306183,  0.01435968,  0.99989221,  0.02307538]
+    - [0.0, 0.0, 0.0, 1.0]
+  camera_model: pinhole
+  distortion_model: radtan
+  # Distortion from your left.yaml
+  distortion_coeffs: [0.003916747322638479, -0.0013856136682756984, -0.002293252785007127, 0.0009102920791396056]
+  # Intrinsics from your left.yaml
+  intrinsics: [430.06572450288667, 428.679198364857, 428.85987542287984, 236.79908843267552]
+  resolution: [848, 480]
+  # Topic from your VINS config (image0_topic)
+  rostopic: /camera/camera/infra1/image_rect_raw
+  # Timeshift from your VINS config (td)
+  timeshift_cam_imu: -0.01065633760723385
+
+cam1:
+  # Extrinsics from your VINS config (body_T_cam1)
+  T_cam_imu:
+    - [ 0.99993775,  0.01100004,  0.00186805,  0.04415253]
+    - [-0.01097211,  0.99983679, -0.01435324,  0.01283481]
+    - [-0.00202563,  0.01433185,  0.99989524,  0.02316573]
+    - [0.0, 0.0, 0.0, 1.0]
+  camera_model: pinhole
+  distortion_model: radtan
+  # Distortion from your right.yaml
+  distortion_coeffs: [0.005388957069554184, -0.0034796995283990695, -0.0019686819785543234, 0.00027067094533561207]
+  # Intrinsics from your right.yaml
+  intrinsics: [430.0227831231812, 428.6180402413955, 428.044027353014, 236.81846043107075]
+  resolution: [848, 480]
+  # Topic from your VINS config (image1_topic)
+  rostopic: /camera/camera/infra2/image_rect_raw
+  # Timeshift assumed same as cam0
+  timeshift_cam_imu: 0.0
