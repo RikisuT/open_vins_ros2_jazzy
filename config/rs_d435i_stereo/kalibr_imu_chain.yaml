@@ -20,7 +20,7 @@ imu0:
   gyroscope_noise_density: 0.000609324 
   gyroscope_random_walk: 0.00005925509 
   rostopic: /camera/camera/imu
-  time_offset: 0.0
+  time_offset: -0.00132
   update_rate: 200
   # three different modes supported:
   # "calibrated" (same as "kalibr"), "kalibr", "rpng"
